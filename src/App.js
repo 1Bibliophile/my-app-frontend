@@ -18,9 +18,6 @@ function App() {
           <Route path="/subsidiaries/new">
             <SubsidiaryForm />
           </Route>
-          <Route path="/subsidiaries/new">
-            <SubsidiaryForm />
-          </Route>
           <Route path="/subsidiaries/:id">
             <SubsidiaryCard />
           </Route>
@@ -30,7 +27,7 @@ function App() {
           <Route path="/assets">
             <Asset />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
