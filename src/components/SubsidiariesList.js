@@ -1,8 +1,12 @@
 import React from 'react'
+import SubsidiaryForm from './SubsidiaryForm'
 
-const SubsidiariesList = () => {
+const SubsidiariesList = ({subsidiaries}) => {
+  
+  const renderSubs = subsidiaries.map(subsidiary => <SubsidiaryForm key={subsidiary.id} subsidiary={subsidiary} />)
+  
   return (
-    <div>SubsidiariesList</div>
+    <div>{renderSubs}</div>
   )
 }
 

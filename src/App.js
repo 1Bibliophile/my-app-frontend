@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Header slogan="Where Dreams Come True" company="Walt Disney" />
+        <Header slogan="Where Dreams Come True" company="Walt Disney Company" />
         <Switch>
           <Route path="/subsidiaries/new">
             <SubsidiaryForm />

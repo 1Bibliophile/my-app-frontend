@@ -4,7 +4,7 @@ const Header = ({slogan, company}) => {
   return (
     <div>
         <h1>{company}</h1>
-        <h2>{slogan}</h2>
+        <h2 className="slogan">{slogan}</h2>
     </div>
   )
 }

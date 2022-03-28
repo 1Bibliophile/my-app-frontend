@@ -2,9 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
+.logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.slogan {
+  font-style: italic;
 }
 
 @media (prefers-reduced-motion: no-preference) {
