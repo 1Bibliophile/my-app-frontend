@@ -1,9 +1,9 @@
 import React from 'react'
-import SubsidiaryForm from './SubsidiaryForm'
+import SubsidiaryCard from './SubsidiaryCard'
 
 const SubsidiariesList = ({subsidiaries}) => {
   
-  const renderSubs = subsidiaries.map(subsidiary => <SubsidiaryForm key={subsidiary.id} subsidiary={subsidiary} />)
+  const renderSubs = subsidiaries.map(subsidiary => <SubsidiaryCard key={subsidiary.id} subsidiary={subsidiary} />)
   
   return (
     <div>{renderSubs}</div>

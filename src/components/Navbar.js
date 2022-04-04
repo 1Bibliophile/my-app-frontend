@@ -54,7 +54,7 @@ const Navbar = () => {
         }}
         exact 
         style={style}
-        to="/assets"
+        to="/asset"
         >Assets
         </NavLink>
     </div>

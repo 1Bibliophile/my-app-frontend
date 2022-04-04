@@ -24,7 +24,7 @@ function App() {
           <Route path="/subsidiaries">
             <SubsidiariesContainer />
           </Route>
-          <Route path="/assets">
+          <Route path="/asset">
             <Asset />
           </Route>
           <Route exact path="/">

@@ -2,21 +2,21 @@ import {useState, useEffect} from 'react'
 import SubsidiariesList from '../components/SubsidiariesList'
 
 const SubsidiariesContainer = () => {
-  const [subsidiaries, setSubsidiaries] = useState()
+  const [subsidiaries, setSubsidiaries] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await fetch("")
-            const data = await response.json()
-            setSubsidiaries(data)
-            setIsLoading(false)
-        } catch(error) {
-            alert(error)
-        }
-    }
+  const fetchData = async () => {
+      try {
+          const response = await fetch("http://127.0.0.1:9292/assets")
+          const data = await response.json()
+          setSubsidiaries(data)
+          setIsLoading(false)
+      } catch(error) {
+          alert(error)
+      }
+  }
 
+  useEffect(() => {
     fetchData()
   }, [])
 
