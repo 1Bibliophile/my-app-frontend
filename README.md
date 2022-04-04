@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+# Disney Business Model (frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+Disney Business Model is a web basic API with Sinatra and Active Record that 
+supports a React frontend. It is based off of the Walt Disney Company's 
+business model of assets and subsidiaries, primarily focusing on their 
+broadcasting ventures. For future reference, the assets have a _has many_
+relationship to the subsidiaries, while the subsidiaries have a _belongs to_
+to the assets.
+
+Disney Business Model uses **Active Record** to access and persist (i.e., store)
+data in a database, which will be used by a separate **React frontend** that 
+interacts with the database via the API.
+
+The frontend is a React application that allows the user to view ten of the 
+Walt Disney Company's assets, and add to / update the list. In the ```Home``` 
+page, there is a breakdown of what the application does and what the user can 
+expect after clicking each link in the top navigation bar. 
+
+Clicking the ```New``` link allows the user to add a new asset to the list. 
+In the ```Subsidiaries```, there is a list of ten assets/subsidiaries (plus any 
+others added by the user). Each tile contains the asset's name and launch date.
+
+## Installation
+
+To install, fork and clone this repository. Once you've cloned this repository 
+in your terminal, ```cd``` into the correct folder.
+
 
 ## Available Scripts
 
@@ -11,60 +37,20 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here's a link to the Sinactra backend repo:
+https://github.com/1Bibliophile/phase-3-sinatra-react-project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
+## Resources
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Any company names mentioned and/or images/logos used are credited to the
+Walt Disney Co.
