@@ -2,12 +2,32 @@ import {useState, useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
 
 const SubsidiaryForm = () => {
+  const [assets, setAssets] = useState([])
+
+  
   const [sub, setSub] = useState("")
+  const [asset, setAsset] = useState("")
   const [launchDate, setLaunchDate] = useState("")
   
+  const history = useHistory()
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+          const response = await fetch("http://127.0.0.1:9292/assets")
+          const data = await response.json()
+          setAssets(data)
+      } catch(error) {
+          alert(error)
+      }
+    }
+    fetchData()
+  
+    
+  }, [])
   
 
-let v = ""
+
 /*
 const handleChange = (e) = {
   setSub({
@@ -20,26 +40,29 @@ const handleChange = (e) = {
 const handleSubmit = e => {
   e.preventDefault()
 
-  if([sub, launchDate].some(value => value.trim() === "")){
+  if([sub, launchDate, asset].some(value => value.trim() === "")){
     alert("Please complete all fields")
 
     return null
   }
 
-  const newSub = {
-    sub: sub,
-    launchDate: launchDate
-  }
+  const newSub = {name: sub, date: launchDate, asset_id: parseInt(asset)}
+  console.log(newSub)
 
-  fetch("http://localhost:9292/assets", {
+  fetch("http://localhost:9292/subsidiaries", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(newSub)
-    
+
   })
+  .then(() => history.push("/subsidiaries"))
+
+  setSub("")
+  setLaunchDate("")
 }
+
   return (
     <>
       <h3>Add a new Subsidiary</h3>
@@ -50,6 +73,11 @@ const handleSubmit = e => {
         <label htmlFor='subDate'>Subsidiary Launch Date</label>
         <input onChange={e => setLaunchDate(e.target.value)} type="text" name="subDate" value={launchDate} required />
         <br />
+        <label htmlFor='SubAsset'>Subsidiary Asset</label>
+        <select onChange={e => setAsset(e.target.value)}>
+          <option selected disabled value="">Select an Asset</option>
+          {assets.map(asset => <option value={asset.id}>{asset.name}</option>)}
+        </select>
         <input type="submit" value="Add Asset" />
       </form>
     </>

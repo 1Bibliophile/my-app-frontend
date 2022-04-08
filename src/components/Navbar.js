@@ -44,7 +44,7 @@ const Navbar = () => {
         exact 
         style={style}
         to="/subsidiaries/new"
-        >New
+        >New Sub
         </NavLink>
 
         <NavLink
