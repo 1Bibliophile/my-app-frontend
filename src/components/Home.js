@@ -22,7 +22,7 @@ const Home = () => {
     
                 <h3>
                 • Click on 'Subsidiaries' to display Disney's current subsidiaries <br /><br />
-                • Click on 'New' to add to/update the list <br /><br />
+                • Click on 'New Sub' to add to/update the list <br /><br />
                 • Click on 'Assets' to display Disney's current assets
     
     

@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar"
 import SubsidiaryCard from "./components/SubsidiaryCard"
 import SubsidiaryForm from "./components/SubsidiaryForm"
 import SubsidiariesContainer from "./containers/SubsidiariesContainer"
-import Asset from "./components/Asset"
+import AssetsContainer from "./containers/AssetsContainer"
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
             <SubsidiariesContainer />
           </Route>
           <Route path="/asset">
-            <Asset />
+            <AssetsContainer />
           </Route>
           <Route exact path="/">
             <Home />

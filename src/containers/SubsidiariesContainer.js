@@ -14,7 +14,7 @@ const SubsidiariesContainer = () => {
   }
   const fetchData = async () => {
       try {
-          const response = await fetch("http://127.0.0.1:9292/subsidiaries")
+          const response = await fetch("http://localhost:9292/subsidiaries")
           const data = await response.json()
           setSubsidiaries(data)
           setIsLoading(false)

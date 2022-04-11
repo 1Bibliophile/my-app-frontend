@@ -14,7 +14,7 @@ const SubsidiaryForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-          const response = await fetch("http://127.0.0.1:9292/assets")
+          const response = await fetch("http://localhost:9292/assets")
           const data = await response.json()
           setAssets(data)
       } catch(error) {
@@ -67,13 +67,13 @@ const handleSubmit = e => {
     <>
       <h3>Add a new Subsidiary</h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor='sub'>Subsidiary</label>
+        <label htmlFor='sub'>Subsidiary</label><br />
         <input onChange={e => setSub(e.target.value)} type="text" name="sub" value={sub} required />
-        <br />
-        <label htmlFor='subDate'>Subsidiary Launch Date</label>
+        <br /><br />
+        <label htmlFor='subDate'>Subsidiary Launch Date</label><br />
         <input onChange={e => setLaunchDate(e.target.value)} type="text" name="subDate" value={launchDate} required />
-        <br />
-        <label htmlFor='SubAsset'>Subsidiary Asset</label>
+        <br /><br />
+        <label htmlFor='SubAsset'>Subsidiary Asset</label><br />
         <select onChange={e => setAsset(e.target.value)}>
           <option selected disabled value="">Select an Asset</option>
           {assets.map(asset => <option value={asset.id}>{asset.name}</option>)}
